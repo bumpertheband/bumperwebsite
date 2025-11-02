@@ -2,6 +2,16 @@ textarea {
     resize: vertical;
 }
 
+#msg {
+    border-width: 3px;    
+}
+#mlbx {
+    border-width: 3px;
+}
+#nmbx {
+    border-width: 3px;
+}
+
 #pgbx {
     display: flex;
     align-items: center;
