@@ -4,11 +4,6 @@
     }
 }
 
-
-body, head {
-    font-family: sans-serif;
-}
-
 .msccont {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
