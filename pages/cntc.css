@@ -4,12 +4,15 @@ textarea {
 
 #msg {
     background-color: lightgray;
+    font-size: 3vmin;
 }
 #mlbx {
     background-color: lightgray;
+    font-size: 3vmin;
 }
 #nmbx {
     background-color: lightgray;
+    font-size: 3vmin;
 }
 
 #pgbx {
