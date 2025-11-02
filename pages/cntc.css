@@ -1,0 +1,31 @@
+textarea {
+    resize: vertical;
+}
+
+#pgbx {
+    display: flex;
+    align-items: center;
+    font-size: 3vmin;
+}
+
+#rsp {
+    height: auto;
+    width: 90%;
+    max-width: 40vw;
+    text-align: center;
+    margin: 5%;
+    padding: 2vmin;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+button {
+    padding: 10px;
+    border: solid black;
+    border-width: 3px;
+    background-color: lightgray;
+    font-size: 3vmin;
+}
+button:hover{
+    background-color: gray;
+}

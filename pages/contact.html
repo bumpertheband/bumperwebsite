@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title>bumper the Band</title>
+        <link rel="icon" href="../favicon.jpg" type="image/x-icon">
+
+        <div class="tp">
+            <div class="brgbx">
+                <a onclick="drppres()"><img class="menu" src="../assets/burg.png"></a>
+                <div id="drp" class="drp">
+                    <div class="drpblnktp"></div>
+                    <a href="../index.html" class="drpitm">Home</a>
+                    <a href="../pages/discography.html" class="drpitm">Music</a>
+                    <a href="../pages/contact.html" class="drpitm">Contact Us</a>
+                    <div class="drpblnkbtm"></div>
+                </div>
+            </div>
+
+            <div class="topbar">
+                <a href="https://open.spotify.com/artist/1gHIm66CzHIb1HP74a0iwo?si=j8R4z3eBQYaNz-tl12QOuw"><img class="tpitm" src="../assets/SocIcn/spotifyblack.png"></a>
+                <a href="https://music.apple.com/us/artist/bumper/1821055021"><img class="tpitm" src="../assets/SocIcn/apple black.png"></a>
+                <a href="https://music.amazon.com/artists/B08KS6K125/bumper?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_3ETikooq0UVxq95pa8KHezBg0"><img class="tpitm" src="../assets/SocIcn/amazon.png"></a>
+                <a href="https://www.instagram.com/bumpertheband/"><img class="tpitm" src="../assets/SocIcn/Insta.png"></a>
+                <a href="https://www.tiktok.com/@bumpertheband"><img class="tpitm" src="../assets/SocIcn/tiktok.png"></a>
+                <a href="https://www.facebook.com/people/bumper-The-Band/61578075552657/"><img class="tpitm" src="../assets/SocIcn/Facebook.png"></a>
+                <a href="https://www.youtube.com/@bumpertheband"><img class="tpitm" src="../assets/SocIcn/youtube.png"></a>
+            </div>
+            
+
+            <img class="tpbnr" src="../assets/bumperbanner.jpg">
+
+            <link rel="stylesheet" href="./cntc.css">
+            <link rel="stylesheet" href="../univ.css">
+            
+            <div class="sld">
+                <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+                <img id="slideshow" class="slideshow">
+                <a class="nxt" onclick="plusSlides(1)">&#10095</a>
+            </div>
+
+        </div>
+    </head>
+    <body>
+        <div class="background">
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+        </div>
+
+        <div class="bulk">
+            <div id="pgbx">
+                <div id="frm">
+                    <h2>Contact Us!</h2>
+                    <form>
+                        <label for="name">Name:</label><br>
+                        <input id="nmbx" type="text" name="name"><br>
+                        <label for="email">Email:</label><br>
+                        <input id="mlbx" type="email" name="email"><br>
+                        Message:<br>
+                        <textarea id="msg" name="mes" rows="5" cols="50"></textarea><br>
+                    </form>
+                    <button onclick="submitform()">Submit</button>
+                </div>
+
+                <div id="rsp"></div>
+            </div>
+
+            <div class="btmblnk"></div>
+
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <script>
+                (function() {
+                    // https://dashboard.emailjs.com/admin/account
+                    emailjs.init({
+                    publicKey: "aY17g7dzaq0kuuLp_",
+                    });
+                })();
+
+                function submitform() {
+                    let nm = document.getElementById('nmbx').value;
+                    let ml = document.getElementById('mlbx').value;
+                    let mg = document.getElementById('msg').value;
+                    if (nm.replaceAll(" ", "") == "" || ml.replaceAll(' ', '') == "" || mg.replaceAll(' ', '') == "") {
+                        document.getElementById('rsp').textContent = "You are missing required information!";
+                        return;
+                    }
+                    let param = {name: nm, email: ml, message: mg};
+
+                    emailjs.send('service_l8pj5vs', 'template_wv1y1bj', param);
+
+                    document.getElementById('rsp').textContent = "Thank you so much for contacting us " + nm + "!";
+
+                    document.getElementById('nmbx').value = "";
+                    document.getElementById('mlbx').value = "";
+                    document.getElementById('msg').value = ""
+                }
+            </script>
+
+            <script>
+                let slideIndex = 1;
+                let drpval = false;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    slideIndex += n;
+                    if (slideIndex < 1) {slideIndex = 11};
+                    if (slideIndex > 11) {slideIndex = 1};
+                    showSlides(slideIndex)
+                };
+
+                function showSlides(n) {
+                    document.getElementById('slideshow').src = "../assets/Slideshow/" + n + ".jpg"
+                };
+
+                function drppres() {
+                    drpval = !drpval;
+                    updtdrp(drpval)
+                };
+
+                function updtdrp(n) {
+                    if (n == true) {
+                        document.getElementById("drp").style.display = "flex";
+                    };
+                    if (n == false) {
+                        document.getElementById("drp").style.display = "none";
+                    }
+                };
+
+                function timnxt() {
+                    plusSlides(1)
+                };
+
+                let intervalID = setInterval(timnxt, 10000);
+            </script>
+        </div>
+    </body>
+</html>

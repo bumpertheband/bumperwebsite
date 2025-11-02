@@ -1,134 +1,48 @@
-html body{
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-#bio {
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
 h1 {
-    padding-left: 5%;
-    padding-top: 20px;
+    font-size: 6vmin;
 }
 
-body {
-    background-color: #E0E2DB;
+h4 {
+    font-size: 3vmin;
 }
 
-#banner {
+/* Merch Content*/
+
+.mrchcont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-right: 3vw;
+    width: 100%;
+}
+
+.listing {
+    width: auto;
+    border-radius: 2rem;
+    border: solid black;
+    border-width: 5px;
+    margin: 5px;
+}
+.listing:hover {
+    background-color: rgba(207, 207, 207, .6);
+    transform: scale(1.03);
+}
+
+
+.listing > img {
     width: 100%;
     height: auto;
-    padding: none;
-    margin: none;
 }
-
-#calendar {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: none;
-    margin-right: none;
-    width: 100%;
-    height: auto;
-    background-color: #1B2432;
-    color: #E0E2DB;
+.listing > p {
+    height: 4vh;
+    margin-left: 1vw;
+    font-size: 3vmin;
+    overflow: hidden;
+    padding-bottom: 3vmin;
 }
-
-#calspace {
-    padding-bottom: 50px;
+.listing > div {
+    height: 2vh;
 }
-
-#task_bar {
-    width: 100%;
+#vwet {
+    margin-left: 1vw;
+    font-size: 3vmin;
 }
-
-iframe {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-#taskbar {
-    width: 100%;
-    height: 300px;
-    background-color: #1B2432;
-}
-
-#strmbtn {
-    margin-left: 1.27%;
-}
-
-button {
-    width: 24%;
-    height: 75px;
-    margin: none;
-    padding: none;
-    background-color: #1B2432;
-    color: #E0E2DB;
-    border: none;
-}
-
-a {
-    text-decoration: none;
-    color: #E0E2DB;
-    display: block;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 3px;
-}
-
-.drpstrm {
-    display: inline;
-}
-
-.drpsoc {
-    display: inline;
-}
-
-.drpstrmcont {
-    display: none;
-    position: absolute;
-}
-
-.drpsoccont {
-    display: none;
-    position: absolute;
-}
-
-.drpstrm:hover .drpstrmcont{
-    display: block;
-    margin-top: .5px;
-    background-color: #1B2432;
-    padding-left: 5px;
-    margin-left: 1.27%;
-    width: 23.46%;
-}
-
-.drpsoc:hover .drpsoccont {
-    display: block;
-    margin-top: .5px;
-    background-color: #1B2432;
-    padding-left: 5px;
-    width: 23.46%;
-    margin-left: 74.5%;
-}
-
-.spotify {
-    padding-left: 4.5%;
-}
-
-.space {
-    height: 50px;
-    border: none;
-    background-color: #E0E2DB;
-}
-
-/*
-#1B2432
-#121420
-#E0E2DB
-#941C2F
-#D2D4C8
-*/

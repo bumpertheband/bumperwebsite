@@ -1,58 +1,140 @@
 <html>
- <head>
-  <title>
-   bumper
-  </title>
+    <head>
+        <title>bumper the Band</title>
+        <link rel="icon" href="./favicon.jpg" type="image/x-icon">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <img src="assets/banner.JPG" id="banner">
-  <div>
-  </div>
- </head>
- <body>
-  <div id="task_bar">
-    <div id="strmbtn" class="drpstrm">
-      <button class="drpstrmbtn">Streaming Sites &#9662</button>
-      <div class="drpstrmcont">
-        <a href="https://open.spotify.com/artist/1gHIm66CzHIb1HP74a0iwo?si=-cJTSaKJQ6KlYA-DCHNrYg">Spotify</a>
-        <a href="https://music.amazon.com/artists/B08KS6K125/bumper?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_lSA2jfG5fw2jPNAgyXw03WvZb">Amazon Music</a>
-        <a href="https://music.apple.com/us/artist/bumper/1821055021">Apple music</a>
-      </div>
-    </div>
+        <div class="tp">
+            <div class="brgbx">
+                <a onclick="drppres()"><img class="menu" src="./assets/burg.png"></a>
+                <div id="drp" class="drp">
+                    <div class="drpblnktp"></div>
+                    <a href="./index.html" class="drpitm">Home</a>
+                    <a href="./pages/discography.html" class="drpitm">Music</a>
+                    <a href="./pages/contact.html" class="drpitm">Contact Us</a>
+                    <div class="drpblnkbtm"></div>
+                </div>
+            </div>
 
-    <button><a href="mailto:bumpertheband@gmail.com">Contact Us</a></button>
+            <div class="topbar">
+                <a href="https://open.spotify.com/artist/1gHIm66CzHIb1HP74a0iwo?si=j8R4z3eBQYaNz-tl12QOuw"><img class="tpitm" src="./assets/SocIcn/spotifyblack.png"></a>
+                <a href="https://music.apple.com/us/artist/bumper/1821055021"><img class="tpitm" src="./assets/SocIcn/apple black.png"></a>
+                <a href="https://music.amazon.com/artists/B08KS6K125/bumper?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_3ETikooq0UVxq95pa8KHezBg0"><img class="tpitm" src="./assets/SocIcn/amazon.png"></a>
+                <a href="https://www.instagram.com/bumpertheband/"><img class="tpitm" src="./assets/SocIcn/Insta.png"></a>
+                <a href="https://www.tiktok.com/@bumpertheband"><img class="tpitm" src="./assets/SocIcn/tiktok.png"></a>
+                <a href="https://www.facebook.com/people/bumper-The-Band/61578075552657/"><img class="tpitm" src="./assets/SocIcn/Facebook.png"></a>
+                <a href="https://www.youtube.com/@bumpertheband"><img class="tpitm" src="./assets/SocIcn/youtube.png"></a>
+            </div>
+            
 
-    <button><a href="https://bumper.printify.me">Merch</a></button>
+            <img class="tpbnr" src="./assets/bumperbanner.jpg">
 
-    <div class="drpsoc">
-      <button class="drpsocbtn">Socials &#9662<i></i></button>
-      <div class="drpsoccont">
-        <a href="https://www.instagram.com/bumpertheband/">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=61578075552657">Facebook</a>
-        <a href="https://x.com/bumpertheband">Twitter</a>
-        <a href="https://www.youtube.com/@bumpertheband">YouTube</a>
-      </div>
-    </div>
-  </div>
-  <div id=“home”>
-    <h2 id="bio">
-      Bumper is a three-piece alternative indie band based in Washington, made up of Jayden Tierney (guitar, vocals), Amos Horne (bass, background vocals), and Maile Salois (drums, keys).<br><br>
+            <link rel="stylesheet" href="./style.css">
+            <link rel="stylesheet" href="./univ.css">
+            
+            <div class="sld">
+                <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+                <img id="slideshow" class="slideshow">
+                <a class="nxt" onclick="plusSlides(1)">&#10095</a>
+            </div>
 
-Drawing inspiration from artists like Jeff Buckley, Nirvana, Alice in Chains, and more, Bumper blends heartfelt melodies with raw, grunge-tinged energy.<br><br>
+        </div>
+    </head>
+    <body>
+        <div class="background">
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+        </div>
 
-Jayden and Amos first played together in another band, which eventually fell apart. After a break from performing, the two began jamming again and quickly realized they needed a drummer to bring their sound to life. Luckily, Amos had been dating Maile for a couple of years—and when he asked if she’d like to join, she said yes.<br><br>
+        <div class="bulk">
+            <div id="bodyitm">
+                <h1 id="hello">Hello!</h1>
+                <h4>bumper is a small three piece alternative indie band from Washington, featuring Jayden Tierney, Maile Salois, and Amos Horne.</h4>
+            </div>
+            <div id="bodyitm">
+                <h1>Merch</h1>
+                <!--<div class='sk-ww-etsy-shop' data-embed-id='25615298'></div><script src='https://widgets.sociablekit.com/etsy-shop/widget.js' defer></script>-->
+                <div class="mrchcont">
+                    <div onclick="merchpressed(0)" class="listing">
+                        <img src="./assets/merch/Crewneck.jpg">
+                        <p id="crwttl">White Rose Crewneck</p>
+                        <p id="crwprc" class="pricetag">$55</p>
+                        <a id="vwet">Order Here</a>
+                        <div></div>
+                    </div>
+                    <div onclick="merchpressed(1)" class="listing">
+                        <img src="./assets/merch/shirt.jpg">
+                        <p id="shrttl">White Rose Shirt</p>
+                        <p id="shrtprc" class="pricetag">$40.35</p>
+                        <a id="vwet">Order Here</a>
+                        <div></div>
+                    </div>
+                    <div onclick="merchpressed(2)" class="listing">
+                        <img src="./assets/merch/hoodie.jpg">
+                        <p id="hoodttl">White Rose Hoodie</p>
+                        <p id="hoodprc" class="pricetag">$50.00</p>
+                        <a id="vwet">Order Here</a>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="btmblnk"></div>
+            </div>
 
-The band then proceeded to write and release their first single White Rose, and is currently working on their next album.
-    </h2>
-  </div>
-  <div id="calendar">
-    <h1>Calander</h1>
-    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&showPrint=0&src=MmI4ZmYzMDg2MWUzM2RmM2U3ZWFlMmU5NWU3OWNkOTBiMDkxNzYyODlmZjY5NGIzMWFhMzJhMmQxMmJlNTkyNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23a79b8e" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-  </div>
-  <div id=“discography”>
-    <h1>Discography</h1>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4OGXV3VqbOcbx6ZZmwuWDB?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </div>
-  <button class="space"></button>
- </body>
+            <script>
+                function merchpressed(n) {
+                    if (n == 0) {
+                        window.location.href = "https://bumper.printify.me/product/24529192/white-rose-unisex-lightweight-crewneck-sweatshirt";
+                    };
+                    if (n == 1) {
+                        window.location.href = "https://bumper.printify.me/product/22292580/white-rose-cover-shirt"
+                    };
+                    if (n == 2) {
+                        window.location.href = "https://bumper.printify.me/product/24529184/white-rose-burning-love-unisex-hoodie";
+                    };
+                }
+            </script>
+
+            <script>
+                let slideIndex = 1;
+                let drpval = false;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    slideIndex += n;
+                    if (slideIndex < 1) {slideIndex = 11};
+                    if (slideIndex > 11) {slideIndex = 1};
+                    showSlides(slideIndex)
+                };
+
+                function showSlides(n) {
+                    document.getElementById('slideshow').src = "./assets/Slideshow/" + n + ".jpg"
+                };
+
+                function drppres() {
+                    drpval = !drpval;
+                    updtdrp(drpval)
+                };
+
+                function updtdrp(n) {
+                    if (n == true) {
+                        document.getElementById("drp").style.display = "flex";
+                    };
+                    if (n == false) {
+                        document.getElementById("drp").style.display = "none";
+                    }
+                };
+
+                function timnxt() {
+                    plusSlides(1)
+                };
+
+                let intervalID = setInterval(timnxt, 10000);
+            </script>
+        </div>
+    </body>
 </html>

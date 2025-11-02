@@ -1,0 +1,96 @@
+@keyframes glow {
+    50% {
+      box-shadow: 0 0 75px hsl(12, 100%, 60%);
+    }
+}
+
+
+body, head {
+    font-family: sans-serif;
+}
+
+.msccont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cmngbx {
+    border: solid black;
+    border-radius: 2rem;
+    border-width: 3px;
+    margin-right: 2vw;
+    font-size: 4vw;
+    display: flex;
+    align-items: center;
+    background-color: rgba(237, 237, 237, .5);
+}
+.cmngbx > p {
+    text-align: center;
+    margin-inline: 3vw;
+}
+
+.songbx {
+    border: solid black;
+    border-radius: 2rem;
+    border-width: 3px;
+    margin-right: 2vw;
+    background-color: rgba(255, 255, 255, .5);
+}
+.songbx > img {
+    width: 90%;
+    height: auto;
+    margin-inline: 5%;
+}
+.songbx > p {
+    text-align: center;
+    font-size: 3vw;
+}
+.songbx > h1 {
+    text-align: center;
+    font-size: 4vw;
+}
+
+#lnks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+}
+#lnks > a:hover {
+    transform: scale(110%);
+}
+
+#lnkicn {
+    width: 50%;
+    margin-inline: 2vw;
+    margin-bottom: 3vh;
+    filter: invert(100%);
+}
+
+/* scrap maybe*/
+
+#msc {
+    font-size: 4vw;
+    margin-block: 5vh;
+}
+
+#cmngsn {
+    background-color: gray;
+    margin: 5%;
+    text-align: center;
+    padding-block: 20px;
+    border-radius: 2rem 2rem 2rem 2rem / 1rem 1rem 1rem 1rem;
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    font-size: 2vw;
+}
+
+.ttls {
+    background-color: lightgray;
+    font-size: 3vw;
+    text-align: center;
+    padding-block: 10px;
+    border: solid black;
+    border-width: 5px;
+    border-radius: 1rem;
+}

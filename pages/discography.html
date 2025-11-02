@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>bumper the Band</title>
+        <link rel="icon" href="../favicon.jpg" type="image/x-icon">
+
+        <div class="background">
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+            <span class="ball"></span>
+        </div>
+
+        <div class="tp">
+            <div class="brgbx">
+                <a onclick="drppres()"><img class="menu" src="../assets/burg.png"></a>
+                <div id="drp" class="drp">
+                    <div class="drpblnktp"></div>
+                    <a href="../index.html" class="drpitm">Home</a>
+                    <a href="../pages/discography.html" class="drpitm">Music</a>
+                    <a href="../pages/contact.html" class="drpitm">Contact Us</a>
+                    <div class="drpblnkbtm"></div>
+                </div>
+            </div>
+
+            <div class="topbar">
+                <a href="https://open.spotify.com/artist/1gHIm66CzHIb1HP74a0iwo?si=j8R4z3eBQYaNz-tl12QOuw"><img class="tpitm" src="../assets/SocIcn/spotifyblack.png"></a>
+                <a href="https://music.apple.com/us/artist/bumper/1821055021"><img class="tpitm" src="../assets/SocIcn/apple black.png"></a>
+                <a href="https://music.amazon.com/artists/B08KS6K125/bumper?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_3ETikooq0UVxq95pa8KHezBg0"><img class="tpitm" src="../assets/SocIcn/amazon.png"></a>
+                <a href="https://www.instagram.com/bumpertheband/"><img class="tpitm" src="../assets/SocIcn/Insta.png"></a>
+                <a href="https://www.tiktok.com/@bumpertheband"><img class="tpitm" src="../assets/SocIcn/tiktok.png"></a>
+                <a href="https://www.facebook.com/people/bumper-The-Band/61578075552657/"><img class="tpitm" src="../assets/SocIcn/Facebook.png"></a>
+                <a href="https://www.youtube.com/@bumpertheband"><img class="tpitm" src="../assets/SocIcn/youtube.png"></a>
+            </div>
+            
+
+            <img class="tpbnr" src="../assets/bumperbanner.jpg">
+
+            <link rel="stylesheet" href="../univ.css">
+            <link rel="stylesheet" href="./disc.css">
+            
+            <div class="sld">
+                <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+                <img id="slideshow" class="slideshow">
+                <a class="nxt" onclick="plusSlides(1)">&#10095</a>
+            </div>
+
+        </div>
+    </head>
+    <body>
+        <div class="bulk">
+            <h1 id="msc">Our Music</h1>
+            <div class="msccont">
+                <div class="songbx">
+                    <h1>White Rose</h1>
+                    <img src="../assets/SongCovers/White Rose.png">
+                    <p>Single</p>
+                    <div id="lnks">
+                        <a href="https://open.spotify.com/track/4OGXV3VqbOcbx6ZZmwuWDB?si=01332830f4924228"><img id="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
+                        <a href="https://music.amazon.com/albums/B0FDFD736N?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_fGmwzQWz4RvWKS7PCm8Eesm0n&trackAsin=B0FDFMKXK2"><img id="lnkicn" src="../assets/SocIcn/amazon.png"></a>
+                        <a href="https://music.apple.com/us/song/white-rose/1821055789"><img id="lnkicn" src="../assets/SocIcn/apple black.png"></a>
+                    </div>
+                </div>
+                <div class="cmngbx">
+                    <p>Coming Soon!</p>
+                </div>
+            </div>
+
+            <div class="btmblnk"></div>
+            
+            <!--
+            <h3 class="ttls">Singles:</h3>
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4OGXV3VqbOcbx6ZZmwuWDB?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <h3 class="ttls">Albums:</h3>
+            <h3 id="Cmngsn">Coming soon!</h3>
+            -->
+
+            <script>
+                let slideIndex = 1;
+                let drpval = false;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    slideIndex += n;
+                    if (slideIndex < 1) {slideIndex = 11};
+                    if (slideIndex > 11) {slideIndex = 1};
+                    showSlides(slideIndex)
+                };
+
+                function showSlides(n) {
+                    document.getElementById('slideshow').src = "../assets/Slideshow/" + n + ".jpg"
+                };
+
+                function drppres() {
+                    drpval = !drpval;
+                    updtdrp(drpval)
+                };
+
+                function updtdrp(n) {
+                    if (n == true) {
+                        document.getElementById("drp").style.display = "flex";
+                    };
+                    if (n == false) {
+                        document.getElementById("drp").style.display = "none";
+                    }
+                };
+
+                function timnxt() {
+                    plusSlides(1)
+                };
+
+                let intervalID = setInterval(timnxt, 10000);
+            </script>
+        </div>
+    </body>
+</html>
