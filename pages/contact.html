@@ -86,6 +86,7 @@
                     let mg = document.getElementById('msg').value;
                     if (nm.replaceAll(" ", "") == "" || ml.replaceAll(' ', '') == "" || mg.replaceAll(' ', '') == "") {
                         document.getElementById('rsp').textContent = "You are missing required information!";
+                        document.getElementById('rsp').style.backgroundColor = "white";
                         return;
                     }
                     let param = {name: nm, email: ml, message: mg};
@@ -93,6 +94,7 @@
                     emailjs.send('service_l8pj5vs', 'template_wv1y1bj', param);
 
                     document.getElementById('rsp').textContent = "Thank you so much for contacting us " + nm + "!";
+                    document.getElementById('rsp').style.backgroundColor = "white";
 
                     document.getElementById('nmbx').value = "";
                     document.getElementById('mlbx').value = "";
