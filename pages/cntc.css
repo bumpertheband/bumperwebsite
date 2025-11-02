@@ -3,13 +3,13 @@ textarea {
 }
 
 #msg {
-    border-width: 3px;    
+    background-color: lightgray;
 }
 #mlbx {
-    border-width: 3px;
+    background-color: lightgray;
 }
 #nmbx {
-    border-width: 3px;
+    background-color: lightgray;
 }
 
 #pgbx {
