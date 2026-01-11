@@ -4,6 +4,11 @@
     }
 }
 
+
+body, head {
+    font-family: sans-serif;
+}
+
 .msccont {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -22,6 +27,8 @@
 .cmngbx > p {
     text-align: center;
     margin-inline: 3vw;
+    padding-top: 13vh;
+    padding-bottom: 13vh;
 }
 
 .songbx {
@@ -29,6 +36,7 @@
     border-radius: 2rem;
     border-width: 3px;
     margin-right: 2vw;
+    margin-bottom: 2vh;
     background-color: rgba(255, 255, 255, .5);
 }
 .songbx > img {
@@ -42,7 +50,7 @@
 }
 .songbx > h1 {
     text-align: center;
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 #lnks {
