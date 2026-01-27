@@ -6,6 +6,18 @@ h4 {
     font-size: 3vmin;
 }
 
+.dntitm {
+    width: 5vw;
+    background-color: black;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 1vmin;
+    padding-inline: 2vw;
+    border-radius: 2rem;
+    font-size: 2vmin;
+}
+
 /* Merch Content*/
 
 .mrchcont {
