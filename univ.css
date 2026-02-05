@@ -99,7 +99,7 @@ html, body {
 }
 
 .menu {
-    width: 5vmin;
+    width: 4%;
     height: auto;
     position: absolute;
     top: 2vh;
@@ -134,7 +134,7 @@ html, body {
 
 .tpitm {
     height: auto;
-    width: 3%;
+    width: 5%;
     margin-inline: 1%;
     margin-top: 1%;
     margin-bottom: 1%;
