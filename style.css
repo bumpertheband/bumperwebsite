@@ -22,8 +22,8 @@ h4 {
 
 .mrchcont {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-right: 3vw;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2vw;
     width: 100%;
 }
 
