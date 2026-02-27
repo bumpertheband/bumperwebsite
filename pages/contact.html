@@ -2,7 +2,10 @@
     <head>
         <title>bumper the Band</title>
         <link rel="icon" href="../favicon.jpg" type="image/x-icon">
-
+        <link rel="stylesheet" href="./cntc.css">
+        <link rel="stylesheet" href="../univ.css">
+    </head>
+    <body>
         <div class="tp">
             <div class="brgbx">
                 <a onclick="drppres()"><img class="menu" src="../assets/burg.png"></a>
@@ -24,22 +27,30 @@
                 <a href="https://www.facebook.com/people/bumper-The-Band/61578075552657/"><img class="tpitm" src="../assets/SocIcn/facebook.png"></a>
                 <a href="https://www.youtube.com/@bumpertheband"><img class="tpitm" src="../assets/SocIcn/youtube.png"></a>
             </div>
-            
 
             <img class="tpbnr" src="../assets/bumperbanner.jpg">
 
-            <link rel="stylesheet" href="./cntc.css">
-            <link rel="stylesheet" href="../univ.css">
-            
             <div class="sld">
-                <a class="prev" onclick="plusSlides(-1)">&#10094</a>
-                <img id="slideshow" class="slideshow">
-                <a class="nxt" onclick="plusSlides(1)">&#10095</a>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <div class="sld-wrapper">
+                    <div class="sld-track" id="sld-track">
+                        <img src="../assets/Slideshow/1.jpg">
+                        <img src="../assets/Slideshow/2.jpg">
+                        <img src="../assets/Slideshow/3.jpg">
+                        <img src="../assets/Slideshow/4.jpg">
+                        <img src="../assets/Slideshow/5.jpg">
+                        <img src="../assets/Slideshow/6.jpg">
+                        <img src="../assets/Slideshow/7.jpg">
+                        <img src="../assets/Slideshow/8.jpg">
+                        <img src="../assets/Slideshow/9.jpg">
+                        <img src="../assets/Slideshow/10.jpg">
+                        <img src="../assets/Slideshow/11.jpg">
+                    </div>
+                </div>
+                <a class="nxt" onclick="plusSlides(1)">&#10095;</a>
             </div>
-
         </div>
-    </head>
-    <body>
+
         <div class="background">
             <span class="ball"></span>
             <span class="ball"></span>
@@ -56,16 +67,15 @@
                 <div id="frm">
                     <h2>Contact Us!</h2>
                     <form>
-                        <label for="name">Name:</label><br>
-                        <input id="nmbx" type="text" name="name"><br>
-                        <label for="email">Email:</label><br>
-                        <input id="mlbx" type="email" name="email"><br>
-                        Message:<br>
-                        <textarea id="msg" name="mes" rows="5" cols="50"></textarea><br>
+                        <label for="nmbx">Name</label>
+                        <input id="nmbx" type="text" name="name">
+                        <label for="mlbx">Email</label>
+                        <input id="mlbx" type="email" name="email">
+                        <label for="msg">Message</label>
+                        <textarea id="msg" name="mes" rows="6"></textarea>
                     </form>
-                    <button onclick="submitform()">Submit</button>
+                    <button onclick="submitform()">Send Message</button>
                 </div>
-
                 <div id="rsp"></div>
             </div>
 
@@ -74,9 +84,8 @@
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
             <script>
                 (function() {
-                    // https://dashboard.emailjs.com/admin/account
                     emailjs.init({
-                    publicKey: "aY17g7dzaq0kuuLp_",
+                        publicKey: "aY17g7dzaq0kuuLp_",
                     });
                 })();
 
@@ -98,45 +107,36 @@
 
                     document.getElementById('nmbx').value = "";
                     document.getElementById('mlbx').value = "";
-                    document.getElementById('msg').value = ""
+                    document.getElementById('msg').value = "";
                 }
             </script>
 
             <script>
-                let slideIndex = 1;
+                let slideIndex = 0;
                 let drpval = false;
-                showSlides(slideIndex);
 
                 function plusSlides(n) {
-                    slideIndex += n;
-                    if (slideIndex < 1) {slideIndex = 11};
-                    if (slideIndex > 11) {slideIndex = 1};
-                    showSlides(slideIndex)
-                };
-
-                function showSlides(n) {
-                    document.getElementById('slideshow').src = "../assets/Slideshow/" + n + ".jpg"
-                };
+                    slideIndex = (slideIndex + n + 11) % 11;
+                    document.getElementById('sld-track').style.transform = `translateX(-${slideIndex * 100}%)`;
+                }
 
                 function drppres() {
                     drpval = !drpval;
-                    updtdrp(drpval)
-                };
+                    updtdrp(drpval);
+                }
 
                 function updtdrp(n) {
-                    if (n == true) {
-                        document.getElementById("drp").style.display = "flex";
-                    };
-                    if (n == false) {
-                        document.getElementById("drp").style.display = "none";
+                    document.getElementById("drp").classList.toggle('open', n);
+                }
+
+                document.addEventListener('click', function(e) {
+                    if (!document.querySelector('.brgbx').contains(e.target) && drpval) {
+                        drpval = false;
+                        updtdrp(false);
                     }
-                };
+                });
 
-                function timnxt() {
-                    plusSlides(1)
-                };
-
-                let intervalID = setInterval(timnxt, 10000);
+                let intervalID = setInterval(() => plusSlides(1), 10000);
             </script>
         </div>
     </body>

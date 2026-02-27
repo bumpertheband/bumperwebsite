@@ -12,6 +12,7 @@ body, head {
 .msccont {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
 }
 
 .cmngbx {
@@ -19,16 +20,17 @@ body, head {
     border-radius: 2rem;
     border-width: 3px;
     margin-right: 2vw;
-    font-size: 4vw;
+    margin-bottom: 2vh;
+    font-size: clamp(16px, 3vw, 28px);
     display: flex;
     align-items: center;
+    justify-content: center;
+    min-height: 380px;
     background-color: rgba(237, 237, 237, .5);
 }
 .cmngbx > p {
     text-align: center;
     margin-inline: 3vw;
-    padding-top: 13vh;
-    padding-bottom: 13vh;
 }
 
 .songbx {
@@ -46,23 +48,23 @@ body, head {
 }
 .songbx > p {
     text-align: center;
-    font-size: 3vw;
+    font-size: clamp(15px, 2.2vw, 22px);
 }
 .songbx > h1 {
     text-align: center;
-    font-size: 3vw;
+    font-size: clamp(18px, 3vw, 32px);
 }
 
-#lnks {
+.lnks {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
 }
-#lnks > a:hover {
+.lnks > a:hover {
     transform: scale(110%);
 }
 
-#lnkicn {
+.lnkicn {
     width: 50%;
     margin-inline: 2vw;
     margin-bottom: 3vh;
@@ -71,9 +73,33 @@ body, head {
 
 /* scrap maybe*/
 
-#msc {
-    font-size: 4vw;
+.msc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
     margin-block: 5vh;
+}
+
+#msc {
+    font-size: clamp(20px, 4vw, 40px);
+    margin: 0;
+}
+
+#srch {
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 3px solid black;
+    border-radius: 2rem;
+    padding: 0.5rem 1.25rem;
+    font-size: clamp(14px, 2vmin, 16px);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: clamp(160px, 25vw, 300px);
+}
+#srch:focus {
+    outline: none;
+    background-color: #f0f0f0;
 }
 
 #cmngsn {

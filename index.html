@@ -2,7 +2,10 @@
     <head>
         <title>bumper the Band</title>
         <link rel="icon" href="./favicon.jpg" type="image/x-icon">
-
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./univ.css">
+    </head>
+    <body>
         <div class="tp">
             <div class="brgbx">
                 <a onclick="drppres()"><img class="menu" src="./assets/burg.png"></a>
@@ -24,22 +27,30 @@
                 <a href="https://www.facebook.com/people/bumper-The-Band/61578075552657/"><img class="tpitm" src="./assets/SocIcn/facebook.png"></a>
                 <a href="https://www.youtube.com/@bumpertheband"><img class="tpitm" src="./assets/SocIcn/youtube.png"></a>
             </div>
-            
 
             <img class="tpbnr" src="./assets/bumperbanner.jpg">
 
-            <link rel="stylesheet" href="./style.css">
-            <link rel="stylesheet" href="./univ.css">
-            
             <div class="sld">
-                <a class="prev" onclick="plusSlides(-1)">&#10094</a>
-                <img id="slideshow" class="slideshow">
-                <a class="nxt" onclick="plusSlides(1)">&#10095</a>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <div class="sld-wrapper">
+                    <div class="sld-track" id="sld-track">
+                        <img src="./assets/Slideshow/1.jpg">
+                        <img src="./assets/Slideshow/2.jpg">
+                        <img src="./assets/Slideshow/3.jpg">
+                        <img src="./assets/Slideshow/4.jpg">
+                        <img src="./assets/Slideshow/5.jpg">
+                        <img src="./assets/Slideshow/6.jpg">
+                        <img src="./assets/Slideshow/7.jpg">
+                        <img src="./assets/Slideshow/8.jpg">
+                        <img src="./assets/Slideshow/9.jpg">
+                        <img src="./assets/Slideshow/10.jpg">
+                        <img src="./assets/Slideshow/11.jpg">
+                    </div>
+                </div>
+                <a class="nxt" onclick="plusSlides(1)">&#10095;</a>
             </div>
-
         </div>
-    </head>
-    <body>
+
         <div class="background">
             <span class="ball"></span>
             <span class="ball"></span>
@@ -52,78 +63,77 @@
         </div>
 
         <div class="bulk">
-            <div id="bodyitm">
+            <div class="bodyitm">
                 <h1 id="hello">Hello!</h1>
                 <h4>bumper is a small three piece alternative indie band from Washington, featuring Jayden Tierney, Maile Salois, and Amos Horne.</h4>
             </div>
-            <div id="bodyitm">
+            <div class="bodyitm">
                  <a class="dntitm" href="https://ko-fi.com/bumpertheband">Support us with a donation!</a>
             </div>
-            <div id="bodyitm">
+            <div class="bodyitm">
                 <h1>Merch</h1>
-                <!--<div class='sk-ww-etsy-shop' data-embed-id='25615298'></div><script src='https://widgets.sociablekit.com/etsy-shop/widget.js' defer></script>-->
                 <div class="mrchcont">
                     <div onclick="merchpressed(8)" class="listing">
                         <img src="./assets/merch/shirt-interneon.png">
-                        <p id="hoodttl">bumper Neon T-Shirt</p>
+                        <p class="listing-title">bumper Neon T-Shirt</p>
                         <p id="hoodprc" class="pricetag">$30.00</p>
-                        <a id="vwet">Order Here</a>
+                        <a class="vwet">Order Here</a>
                         <div></div>
                     </div>
                     <div onclick="merchpressed(7)" class="listing">
                         <img src="./assets/merch/shirt-interpic.png">
-                        <p id="hoodttl">Album T-Shirt</p>
-                        <p id="hoodprc" class="pricetag">$30.00</p>
-                        <a id="vwet">Order Here</a>
+                        <p class="listing-title">Album T-Shirt</p>
+                        <p id="hoodprc2" class="pricetag">$30.00</p>
+                        <a class="vwet">Order Here</a>
                         <div></div>
                     </div>
                     <div onclick="merchpressed(6)" class="listing">
                         <img src="./assets/merch/longsleeve-inter.png">
-                        <p id="hoodttl">BUMP3R Longsleeve</p>
-                        <p id="hoodprc" class="pricetag">$50.00</p>
-                        <a id="vwet">Order Here</a>
+                        <p class="listing-title">BUMP3R Longsleeve</p>
+                        <p id="hoodprc3" class="pricetag">$50.00</p>
+                        <a class="vwet">Order Here</a>
                         <div></div>
                     </div>
                     <div onclick="merchpressed(5)" class="listing">
                         <img src="./assets/merch/crewneck-bump3r.jpg">
-                        <p id="hoodttl">BUMP3R Crewneck</p>
-                        <p id="hoodprc" class="pricetag">$52.00</p>
-                        <a id="vwet">Order Here</a>
+                        <p class="listing-title">BUMP3R Crewneck</p>
+                        <p id="hoodprc4" class="pricetag">$52.00</p>
+                        <a class="vwet">Order Here</a>
                         <div></div>
                     </div>
                     <div onclick="merchpressed(3)" class="listing">
                         <img src="./assets/merch/sticker.png">
-                        <p id="hoodttl">BUMP3R Bumper Sticker</p>
-                        <p id="hoodprc" class="pricetag">$7.25</p>
-                        <a id="vwet">Order Here</a>
+                        <p class="listing-title">BUMP3R Bumper Sticker</p>
+                        <p id="hoodprc5" class="pricetag">$7.25</p>
+                        <a class="vwet">Order Here</a>
                         <div></div>
                     </div>
                     <div onclick="merchpressed(4)" class="listing">
                         <img src="./assets/merch/hat-inter.png">
-                        <p id="hoodttl">BUMP3R Hat</p>
-                        <p id="hoodprc" class="pricetag">$25.00</p>
-                        <a id="vwet">Order Here</a>
+                        <p class="listing-title">BUMP3R Hat</p>
+                        <p id="hoodprc6" class="pricetag">$25.00</p>
+                        <a class="vwet">Order Here</a>
                         <div></div>
                     </div>
                     <div onclick="merchpressed(0)" class="listing">
                         <img src="./assets/merch/Crewneck.jpg">
-                        <p id="crwttl">White Rose Crewneck</p>
+                        <p class="listing-title">White Rose Crewneck</p>
                         <p id="crwprc" class="pricetag">$55</p>
-                        <a id="vwet">Order Here</a>
+                        <a class="vwet">Order Here</a>
                         <div></div>
                     </div>
                     <div onclick="merchpressed(1)" class="listing">
                         <img src="./assets/merch/shirt.jpg">
-                        <p id="shrttl">White Rose Shirt</p>
+                        <p class="listing-title">White Rose Shirt</p>
                         <p id="shrtprc" class="pricetag">$40.35</p>
-                        <a id="vwet">Order Here</a>
+                        <a class="vwet">Order Here</a>
                         <div></div>
                     </div>
                     <div onclick="merchpressed(2)" class="listing">
                         <img src="./assets/merch/hoodie.jpg">
-                        <p id="hoodttl">White Rose Hoodie</p>
-                        <p id="hoodprc" class="pricetag">$50.00</p>
-                        <a id="vwet">Order Here</a>
+                        <p class="listing-title">White Rose Hoodie</p>
+                        <p id="hoodprc7" class="pricetag">$50.00</p>
+                        <a class="vwet">Order Here</a>
                         <div></div>
                     </div>
                 </div>
@@ -163,40 +173,31 @@
             </script>
 
             <script>
-                let slideIndex = 1;
+                let slideIndex = 0;
                 let drpval = false;
-                showSlides(slideIndex);
 
                 function plusSlides(n) {
-                    slideIndex += n;
-                    if (slideIndex < 1) {slideIndex = 11};
-                    if (slideIndex > 11) {slideIndex = 1};
-                    showSlides(slideIndex)
-                };
-
-                function showSlides(n) {
-                    document.getElementById('slideshow').src = "./assets/Slideshow/" + n + ".jpg"
-                };
+                    slideIndex = (slideIndex + n + 11) % 11;
+                    document.getElementById('sld-track').style.transform = `translateX(-${slideIndex * 100}%)`;
+                }
 
                 function drppres() {
                     drpval = !drpval;
-                    updtdrp(drpval)
-                };
+                    updtdrp(drpval);
+                }
 
                 function updtdrp(n) {
-                    if (n == true) {
-                        document.getElementById("drp").style.display = "flex";
-                    };
-                    if (n == false) {
-                        document.getElementById("drp").style.display = "none";
+                    document.getElementById("drp").classList.toggle('open', n);
+                }
+
+                document.addEventListener('click', function(e) {
+                    if (!document.querySelector('.brgbx').contains(e.target) && drpval) {
+                        drpval = false;
+                        updtdrp(false);
                     }
-                };
+                });
 
-                function timnxt() {
-                    plusSlides(1)
-                };
-
-                let intervalID = setInterval(timnxt, 10000);
+                let intervalID = setInterval(() => plusSlides(1), 10000);
             </script>
         </div>
     </body>

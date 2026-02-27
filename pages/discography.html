@@ -2,7 +2,10 @@
     <head>
         <title>bumper the Band</title>
         <link rel="icon" href="../favicon.jpg" type="image/x-icon">
-
+        <link rel="stylesheet" href="../univ.css">
+        <link rel="stylesheet" href="./disc.css">
+    </head>
+    <body>
         <div class="background">
             <span class="ball"></span>
             <span class="ball"></span>
@@ -35,113 +38,134 @@
                 <a href="https://www.facebook.com/people/bumper-The-Band/61578075552657/"><img class="tpitm" src="../assets/SocIcn/facebook.png"></a>
                 <a href="https://www.youtube.com/@bumpertheband"><img class="tpitm" src="../assets/SocIcn/youtube.png"></a>
             </div>
-            
 
             <img class="tpbnr" src="../assets/bumperbanner.jpg">
 
-            <link rel="stylesheet" href="../univ.css">
-            <link rel="stylesheet" href="./disc.css">
-            
             <div class="sld">
-                <a class="prev" onclick="plusSlides(-1)">&#10094</a>
-                <img id="slideshow" class="slideshow">
-                <a class="nxt" onclick="plusSlides(1)">&#10095</a>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <div class="sld-wrapper">
+                    <div class="sld-track" id="sld-track">
+                        <img src="../assets/Slideshow/1.jpg">
+                        <img src="../assets/Slideshow/2.jpg">
+                        <img src="../assets/Slideshow/3.jpg">
+                        <img src="../assets/Slideshow/4.jpg">
+                        <img src="../assets/Slideshow/5.jpg">
+                        <img src="../assets/Slideshow/6.jpg">
+                        <img src="../assets/Slideshow/7.jpg">
+                        <img src="../assets/Slideshow/8.jpg">
+                        <img src="../assets/Slideshow/9.jpg">
+                        <img src="../assets/Slideshow/10.jpg">
+                        <img src="../assets/Slideshow/11.jpg">
+                    </div>
+                </div>
+                <a class="nxt" onclick="plusSlides(1)">&#10095;</a>
             </div>
-
         </div>
-    </head>
-    <body>
+
         <div class="bulk">
-            <h1 id="msc">Our Music</h1>
+            <div class="msc-header">
+                <h1 id="msc">Our Music</h1>
+                <input type="search" id="srch" placeholder="Search songs or albums...">
+            </div>
             <div class="msccont">
+                <div class="songbx">
+                    <h1>Take The Burden - Extended</h1>
+                    <img src="../assets/SongCovers/TTB-E.PNG">
+                    <p>Single</p>
+                    <div class="lnks">
+                        <a href="https://open.spotify.com/track/3CLV5wNIebWV4jms2z28hJ?si=0c45966f5ed24af1"><img class="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
+                        <a href="https://music.amazon.com/albums/B0GN9H6BYY?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_oZPCb9plZE5S5yPrR7qjqOSCB&trackAsin=B0GN8Z1SK8"><img class="lnkicn" src="../assets/SocIcn/amazon.png"></a>
+                        <a href="https://music.apple.com/us/song/take-the-burden-extended-version/1877299307"><img class="lnkicn" src="../assets/SocIcn/apple black.png"></a>
+                    </div>
+                </div>
                 <div class="songbx">
                     <h1>Your Love Tonight</h1>
                     <img src="../assets/SongCovers/Intertwined.PNG">
                     <p>Intertwined</p>
-                    <div id="lnks">
-                        <a href="https://open.spotify.com/track/1EAJiDwnlCKREBBrLS4KMY?si=6e792905f4974d5e"><img id="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
-                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_EJCyuZj5iMyr2X4bsSJQcc6YM&trackAsin=B0GFB66TJY"><img id="lnkicn" src="../assets/SocIcn/amazon.png"></a>
-                        <a href="https://music.apple.com/us/song/your-love-tonight/1866956728"><img id="lnkicn" src="../assets/SocIcn/apple black.png"></a>
+                    <div class="lnks">
+                        <a href="https://open.spotify.com/track/1EAJiDwnlCKREBBrLS4KMY?si=6e792905f4974d5e"><img class="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
+                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_EJCyuZj5iMyr2X4bsSJQcc6YM&trackAsin=B0GFB66TJY"><img class="lnkicn" src="../assets/SocIcn/amazon.png"></a>
+                        <a href="https://music.apple.com/us/song/your-love-tonight/1866956728"><img class="lnkicn" src="../assets/SocIcn/apple black.png"></a>
                     </div>
                 </div>
                 <div class="songbx">
                     <h1>I Won't Forget</h1>
                     <img src="../assets/SongCovers/Intertwined.PNG">
                     <p>Intertwined</p>
-                    <div id="lnks">
-                        <a href="https://open.spotify.com/track/32e30IhF0qjLNqAkpHO9n3?si=f210bd8b41a5457d"><img id="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
-                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_I5fmwJ64N80dUU7sUJk5k3Ooy&trackAsin=B0GFB3JTZC"><img id="lnkicn" src="../assets/SocIcn/amazon.png"></a>
-                        <a href="https://music.apple.com/us/song/i-wont-forget/1866956729"><img id="lnkicn" src="../assets/SocIcn/apple black.png"></a>
+                    <div class="lnks">
+                        <a href="https://open.spotify.com/track/32e30IhF0qjLNqAkpHO9n3?si=f210bd8b41a5457d"><img class="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
+                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_I5fmwJ64N80dUU7sUJk5k3Ooy&trackAsin=B0GFB3JTZC"><img class="lnkicn" src="../assets/SocIcn/amazon.png"></a>
+                        <a href="https://music.apple.com/us/song/i-wont-forget/1866956729"><img class="lnkicn" src="../assets/SocIcn/apple black.png"></a>
                     </div>
                 </div>
                 <div class="songbx">
                     <h1>Selene</h1>
                     <img src="../assets/SongCovers/Intertwined.PNG">
                     <p>Intertwined</p>
-                    <div id="lnks">
-                        <a href="https://open.spotify.com/track/2RsLPJWU0TSgz9ejXhn4kI?si=d6378d2f5f214d0f"><img id="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
-                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_iAuC00R4wKv5cAnQBwgayDF0M&trackAsin=B0GF9VSC5N"><img id="lnkicn" src="../assets/SocIcn/amazon.png"></a>
-                        <a href="https://music.apple.com/us/song/selene/1866956730"><img id="lnkicn" src="../assets/SocIcn/apple black.png"></a>
+                    <div class="lnks">
+                        <a href="https://open.spotify.com/track/2RsLPJWU0TSgz9ejXhn4kI?si=d6378d2f5f214d0f"><img class="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
+                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_iAuC00R4wKv5cAnQBwgayDF0M&trackAsin=B0GF9VSC5N"><img class="lnkicn" src="../assets/SocIcn/amazon.png"></a>
+                        <a href="https://music.apple.com/us/song/selene/1866956730"><img class="lnkicn" src="../assets/SocIcn/apple black.png"></a>
                     </div>
                 </div>
                 <div class="songbx">
                     <h1>Want to Stay</h1>
                     <img src="../assets/SongCovers/Intertwined.PNG">
                     <p>Intertwined</p>
-                    <div id="lnks">
-                        <a href="https://open.spotify.com/track/66v3ffnEayMTE40DK1fthe?si=056d60b898bc4f24"><img id="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
-                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_8KtZjFMhc3crarINQZ1cpy8ZR&trackAsin=B0GFB193YS"><img id="lnkicn" src="../assets/SocIcn/amazon.png"></a>
-                        <a href="https://music.apple.com/us/song/want-to-stay/1866956731"><img id="lnkicn" src="../assets/SocIcn/apple black.png"></a>
+                    <div class="lnks">
+                        <a href="https://open.spotify.com/track/66v3ffnEayMTE40DK1fthe?si=056d60b898bc4f24"><img class="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
+                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_8KtZjFMhc3crarINQZ1cpy8ZR&trackAsin=B0GFB193YS"><img class="lnkicn" src="../assets/SocIcn/amazon.png"></a>
+                        <a href="https://music.apple.com/us/song/want-to-stay/1866956731"><img class="lnkicn" src="../assets/SocIcn/apple black.png"></a>
                     </div>
                 </div>
                 <div class="songbx">
                     <h1>Intertwined</h1>
                     <img src="../assets/SongCovers/Intertwined.PNG">
                     <p>Intertwined</p>
-                    <div id="lnks">
-                        <a href="https://open.spotify.com/track/2zFSnAwvO1G6vBGJZU23Cy?si=ebc49e439a324323"><img id="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
-                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_shUtSmfCFYHIk4TWUt7PJyKmF&trackAsin=B0GF9VB6W5"><img id="lnkicn" src="../assets/SocIcn/amazon.png"></a>
-                        <a href="https://music.apple.com/us/song/intertwined/1866956732"><img id="lnkicn" src="../assets/SocIcn/apple black.png"></a>
+                    <div class="lnks">
+                        <a href="https://open.spotify.com/track/2zFSnAwvO1G6vBGJZU23Cy?si=ebc49e439a324323"><img class="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
+                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_shUtSmfCFYHIk4TWUt7PJyKmF&trackAsin=B0GF9VB6W5"><img class="lnkicn" src="../assets/SocIcn/amazon.png"></a>
+                        <a href="https://music.apple.com/us/song/intertwined/1866956732"><img class="lnkicn" src="../assets/SocIcn/apple black.png"></a>
                     </div>
                 </div>
                 <div class="songbx">
                     <h1>Take the Burden</h1>
                     <img src="../assets/SongCovers/Intertwined.PNG">
                     <p>Intertwined</p>
-                    <div id="lnks">
-                        <a href="https://open.spotify.com/track/7qaqX1Esf9Ujb43iCTP1CB?si=f8bffbc3ef32409c"><img id="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
-                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_vvk9ey18A0vMNbvFYl9WTcADN&trackAsin=B0GF9W48LF"><img id="lnkicn" src="../assets/SocIcn/amazon.png"></a>
-                        <a href="https://music.apple.com/us/song/take-the-burden/1866956733"><img id="lnkicn" src="../assets/SocIcn/apple black.png"></a>
+                    <div class="lnks">
+                        <a href="https://open.spotify.com/track/7qaqX1Esf9Ujb43iCTP1CB?si=f8bffbc3ef32409c"><img class="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
+                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_vvk9ey18A0vMNbvFYl9WTcADN&trackAsin=B0GF9W48LF"><img class="lnkicn" src="../assets/SocIcn/amazon.png"></a>
+                        <a href="https://music.apple.com/us/song/take-the-burden/1866956733"><img class="lnkicn" src="../assets/SocIcn/apple black.png"></a>
                     </div>
                 </div>
                 <div class="songbx">
                     <h1>White Rose</h1>
                     <img src="../assets/SongCovers/Intertwined.PNG">
                     <p>Intertwined</p>
-                    <div id="lnks">
-                        <a href="https://open.spotify.com/track/2x69L4dKwMGPFxsVjmfix9?si=dd66a31d7e9e4bf8"><img id="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
-                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_rNBsIuD8Oltc35n6xcA6Cl5Bk&trackAsin=B0GF9TX1TT"><img id="lnkicn" src="../assets/SocIcn/amazon.png"></a>
-                        <a href="https://music.apple.com/us/song/white-rose/1866956734"><img id="lnkicn" src="../assets/SocIcn/apple black.png"></a>
+                    <div class="lnks">
+                        <a href="https://open.spotify.com/track/2x69L4dKwMGPFxsVjmfix9?si=dd66a31d7e9e4bf8"><img class="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
+                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_rNBsIuD8Oltc35n6xcA6Cl5Bk&trackAsin=B0GF9TX1TT"><img class="lnkicn" src="../assets/SocIcn/amazon.png"></a>
+                        <a href="https://music.apple.com/us/song/white-rose/1866956734"><img class="lnkicn" src="../assets/SocIcn/apple black.png"></a>
                     </div>
                 </div>
                 <div class="songbx">
                     <h1>End Scene</h1>
                     <img src="../assets/SongCovers/Intertwined.PNG">
                     <p>Intertwined</p>
-                    <div id="lnks">
-                        <a href="https://open.spotify.com/track/4pjbGYchUpybgtVFjOI6qp?si=a7d28a31888d4f53"><img id="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
-                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_nI8NzDXiIJ8xosDkd3LsfugY9&trackAsin=B0GFBSXS1W"><img id="lnkicn" src="../assets/SocIcn/amazon.png"></a>
-                        <a href="https://music.apple.com/us/song/end-scene/1866956735"><img id="lnkicn" src="../assets/SocIcn/apple black.png"></a>
+                    <div class="lnks">
+                        <a href="https://open.spotify.com/track/4pjbGYchUpybgtVFjOI6qp?si=a7d28a31888d4f53"><img class="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
+                        <a href="https://music.amazon.com/albums/B0GFB6JPC6?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_nI8NzDXiIJ8xosDkd3LsfugY9&trackAsin=B0GFBSXS1W"><img class="lnkicn" src="../assets/SocIcn/amazon.png"></a>
+                        <a href="https://music.apple.com/us/song/end-scene/1866956735"><img class="lnkicn" src="../assets/SocIcn/apple black.png"></a>
                     </div>
                 </div>
                 <div class="songbx">
                     <h1>White Rose</h1>
                     <img src="../assets/SongCovers/White Rose.png">
                     <p>Single</p>
-                    <div id="lnks">
-                        <a href="https://open.spotify.com/track/4OGXV3VqbOcbx6ZZmwuWDB?si=01332830f4924228"><img id="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
-                        <a href="https://music.amazon.com/albums/B0FDFD736N?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_fGmwzQWz4RvWKS7PCm8Eesm0n&trackAsin=B0FDFMKXK2"><img id="lnkicn" src="../assets/SocIcn/amazon.png"></a>
-                        <a href="https://music.apple.com/us/song/white-rose/1821055789"><img id="lnkicn" src="../assets/SocIcn/apple black.png"></a>
+                    <div class="lnks">
+                        <a href="https://open.spotify.com/track/4OGXV3VqbOcbx6ZZmwuWDB?si=01332830f4924228"><img class="lnkicn" src="../assets/SocIcn/spotifyblack.png"></a>
+                        <a href="https://music.amazon.com/albums/B0FDFD736N?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_fGmwzQWz4RvWKS7PCm8Eesm0n&trackAsin=B0FDFMKXK2"><img class="lnkicn" src="../assets/SocIcn/amazon.png"></a>
+                        <a href="https://music.apple.com/us/song/white-rose/1821055789"><img class="lnkicn" src="../assets/SocIcn/apple black.png"></a>
                     </div>
                 </div>
                 <div class="cmngbx">
@@ -150,50 +174,42 @@
             </div>
 
             <div class="btmblnk"></div>
-            
-            <!--
-            <h3 class="ttls">Singles:</h3>
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4OGXV3VqbOcbx6ZZmwuWDB?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-            <h3 class="ttls">Albums:</h3>
-            <h3 id="Cmngsn">Coming soon!</h3>
-            -->
 
             <script>
-                let slideIndex = 1;
+                let slideIndex = 0;
                 let drpval = false;
-                showSlides(slideIndex);
 
                 function plusSlides(n) {
-                    slideIndex += n;
-                    if (slideIndex < 1) {slideIndex = 11};
-                    if (slideIndex > 11) {slideIndex = 1};
-                    showSlides(slideIndex)
-                };
-
-                function showSlides(n) {
-                    document.getElementById('slideshow').src = "../assets/Slideshow/" + n + ".jpg"
-                };
+                    slideIndex = (slideIndex + n + 11) % 11;
+                    document.getElementById('sld-track').style.transform = `translateX(-${slideIndex * 100}%)`;
+                }
 
                 function drppres() {
                     drpval = !drpval;
-                    updtdrp(drpval)
-                };
+                    updtdrp(drpval);
+                }
 
                 function updtdrp(n) {
-                    if (n == true) {
-                        document.getElementById("drp").style.display = "flex";
-                    };
-                    if (n == false) {
-                        document.getElementById("drp").style.display = "none";
+                    document.getElementById("drp").classList.toggle('open', n);
+                }
+
+                document.addEventListener('click', function(e) {
+                    if (!document.querySelector('.brgbx').contains(e.target) && drpval) {
+                        drpval = false;
+                        updtdrp(false);
                     }
-                };
+                });
 
-                function timnxt() {
-                    plusSlides(1)
-                };
+                document.getElementById('srch').addEventListener('input', function() {
+                    const q = this.value.toLowerCase().trim();
+                    document.querySelectorAll('.songbx').forEach(function(box) {
+                        const title = box.querySelector('h1').textContent.toLowerCase();
+                        const album = box.querySelector('p').textContent.toLowerCase();
+                        box.style.display = (title.includes(q) || album.includes(q)) ? '' : 'none';
+                    });
+                });
 
-                let intervalID = setInterval(timnxt, 10000);
+                let intervalID = setInterval(() => plusSlides(1), 10000);
             </script>
         </div>
     </body>

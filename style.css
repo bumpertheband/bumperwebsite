@@ -3,11 +3,10 @@ h1 {
 }
 
 h4 {
-    font-size: 3vmin;
+    font-size: clamp(14px, 3vmin, 20px);
 }
 
 .dntitm {
-    width: 5vw;
     background-color: black;
     text-align: center;
     color: white;
@@ -15,7 +14,7 @@ h4 {
     padding: 1vmin;
     padding-inline: 2vw;
     border-radius: 2rem;
-    font-size: 2vmin;
+    font-size: clamp(13px, 2vmin, 16px);
 }
 
 /* Merch Content*/
@@ -45,16 +44,15 @@ h4 {
     height: auto;
 }
 .listing > p {
-    height: 4vh;
+    height: auto;
     margin-left: 1vw;
     font-size: 3vmin;
-    overflow: hidden;
     padding-bottom: 3vmin;
 }
 .listing > div {
     height: 2vh;
 }
-#vwet {
+.vwet {
     margin-left: 1vw;
     font-size: 3vmin;
 }

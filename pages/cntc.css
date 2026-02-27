@@ -2,40 +2,87 @@ textarea {
     resize: vertical;
 }
 
-#msg {
-    background-color: lightgray;
-    font-size: 3vmin;
-}
-#mlbx {
-    background-color: lightgray;
-    font-size: 3vmin;
-}
-#nmbx {
-    background-color: lightgray;
-    font-size: 3vmin;
+#pgbx {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 1rem;
 }
 
-#pgbx {
-    font-size: 3vmin;
+#frm {
+    background-color: rgba(255, 255, 255, 0.88);
+    border: 3px solid black;
+    border-radius: 2rem;
+    padding: 2rem 2.5rem;
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    box-sizing: border-box;
+}
+
+#frm h2 {
+    text-align: center;
+    margin: 0 0 0.25rem;
+    font-size: clamp(20px, 3vmin, 28px);
+}
+
+#frm form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+#frm label {
+    font-size: clamp(14px, 2.5vmin, 16px);
+    margin-top: 0.4rem;
+}
+
+#nmbx, #mlbx, #msg {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #efefef;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: clamp(14px, 2.5vmin, 16px);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+#nmbx:focus, #mlbx:focus, #msg:focus {
+    outline: none;
+    border-color: #444;
+    background-color: #e4e4e4;
+}
+
+button {
+    width: 100%;
+    padding: 0.7rem;
+    border: 3px solid black;
+    border-radius: 0.5rem;
+    background-color: black;
+    color: white;
+    font-size: clamp(14px, 2.5vmin, 16px);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.25rem;
+}
+button:hover {
+    background-color: #333;
 }
 
 #rsp {
     height: auto;
-    width: 90%;
-    max-width: 40vw;
+    width: 100%;
+    max-width: 540px;
     text-align: center;
-    margin: 5%;
-    padding: 2vmin;
-    border-radius: 2rem;
-}
-
-button {
-    padding: 10px;
-    border: solid black;
-    border-width: 3px;
-    background-color: lightgray;
-    font-size: 3vmin;
-}
-button:hover{
-    background-color: gray;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: clamp(14px, 2.5vmin, 16px);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    box-sizing: border-box;
 }

@@ -15,15 +15,25 @@ html, body {
 
 /* Slideshow */
 
-.slideshow {
-    width: 90%;
-    height: auto;
-    overflow: hidden;
-    max-width: 100%;
-}
-
 .sld {
     display: flex;
+    align-items: center;
+}
+
+.sld-wrapper {
+    width: 90%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.sld-track {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+.sld-track > img {
+    width: 100%;
+    flex-shrink: 0;
+    height: auto;
 }
 
 .sldbtn {
@@ -59,11 +69,11 @@ html, body {
 
 .drp {
     position: absolute;
-    width: 15vw;
-    font-size: 2vmin;
+    width: clamp(120px, 15vw, 220px);
+    font-size: clamp(12px, 2vmin, 16px);
     background-color: white;
     color: black;
-    display: none;
+    display: flex;
     align-items: center;
     flex-direction: column;
     left: 0;
@@ -71,6 +81,18 @@ html, body {
     border-radius: 15px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    border: 2px solid black;
+    box-shadow: 4px 6px 0 black;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 10;
+}
+.drp.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 .drpblnktp {
@@ -91,7 +113,8 @@ html, body {
     color: black;
 }
 .drpitm:hover {
-    background-color: lightgray;
+    background-color: black;
+    color: white;
 }
 
 .brgbx {
@@ -99,11 +122,11 @@ html, body {
 }
 
 .menu {
-    width: 6%;
+    width: clamp(22px, 4vw, 64px);
     height: auto;
     position: absolute;
     top: 2vh;
-    left: 10;
+    left: 10px;
     z-index: 1;
 }
 .menu:hover {
@@ -124,8 +147,7 @@ html, body {
     margin-right: auto;
     max-width: 100%;
     width: 60%;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-block: 50px;
 }
 
 .topbar {
@@ -134,7 +156,7 @@ html, body {
 
 .tpitm {
     height: auto;
-    width: 5%;
+    width: clamp(22px, 4vw, 64px);
     margin-inline: 1%;
     margin-top: 1%;
     margin-bottom: 1%;
@@ -147,8 +169,7 @@ html, body {
 
 @keyframes move {
     100% {
-        transform: translate3d(0, 0, 1px)
-        rotate(360deg);
+        transform: translate3d(0, 0, 1px) rotate(360deg);
     }
 }
 
@@ -181,7 +202,7 @@ html, body {
     animation-duration: 40s;
     animation-delay: -3s;
     transform-origin: 16vw -2vh;
-    box-shadow: 40vmin 0 5.703076368487546vmin currentColor;;
+    box-shadow: 40vmin 0 5.703076368487546vmin currentColor;
 }
 .ball:nth-child(2) {
     top: 42%;
