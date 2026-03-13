@@ -14,6 +14,9 @@
                     <a href="./index.html" class="drpitm">Home</a>
                     <a href="./pages/discography.html" class="drpitm">Music</a>
                     <a href="./pages/contact.html" class="drpitm">Contact Us</a>
+                    <a href="./pages/cart.html" class="drpitm">Cart <span id="cart-badge" class="cart-badge" style="display:none"></span></a>
+                    <a id="nav-login-link" href="./pages/login.html" class="drpitm">Login</a>
+                    <a id="nav-logout-link" href="#" class="drpitm" onclick="logout(); return false;" style="display:none">Logout</a>
                     <div class="drpblnkbtm"></div>
                 </div>
             </div>
@@ -72,105 +75,103 @@
             </div>
             <div class="bodyitm">
                 <h1>Merch</h1>
+                <!-- Size picker modal -->
+                <div id="size-modal" class="size-modal-overlay" style="display:none">
+                    <div class="size-modal">
+                        <h3 id="size-modal-title">Choose a size</h3>
+                        <div class="size-grid">
+                            <button class="size-btn" data-size="XS">XS</button>
+                            <button class="size-btn" data-size="S">S</button>
+                            <button class="size-btn" data-size="M">M</button>
+                            <button class="size-btn" data-size="L">L</button>
+                            <button class="size-btn" data-size="XL">XL</button>
+                            <button class="size-btn" data-size="2XL">2XL</button>
+                            <button class="size-btn" data-size="3XL">3XL</button>
+                        </div>
+                        <button class="size-modal-close" id="size-modal-close">Cancel</button>
+                    </div>
+                </div>
+
                 <div class="mrchcont">
-                    <div onclick="merchpressed(8)" class="listing">
+                    <!-- product_id=9: bumper Neon T-Shirt -->
+                    <div class="listing">
                         <img src="./assets/merch/shirt-interneon.png">
                         <p class="listing-title">bumper Neon T-Shirt</p>
-                        <p id="hoodprc" class="pricetag">$30.00</p>
-                        <a class="vwet">Order Here</a>
+                        <p class="pricetag">$30.00</p>
+                        <button class="atc-btn" onclick="addToCartClicked(event, 9, 'bumper Neon T-Shirt', true)">Add to Cart</button>
                         <div></div>
                     </div>
-                    <div onclick="merchpressed(7)" class="listing">
+                    <!-- product_id=8: Album T-Shirt -->
+                    <div class="listing">
                         <img src="./assets/merch/shirt-interpic.png">
                         <p class="listing-title">Album T-Shirt</p>
-                        <p id="hoodprc2" class="pricetag">$30.00</p>
-                        <a class="vwet">Order Here</a>
+                        <p class="pricetag">$30.00</p>
+                        <button class="atc-btn" onclick="addToCartClicked(event, 8, 'Album T-Shirt', true)">Add to Cart</button>
                         <div></div>
                     </div>
-                    <div onclick="merchpressed(6)" class="listing">
+                    <!-- product_id=7: BUMP3R Longsleeve -->
+                    <div class="listing">
                         <img src="./assets/merch/longsleeve-inter.png">
                         <p class="listing-title">BUMP3R Longsleeve</p>
-                        <p id="hoodprc3" class="pricetag">$50.00</p>
-                        <a class="vwet">Order Here</a>
+                        <p class="pricetag">$50.00</p>
+                        <button class="atc-btn" onclick="addToCartClicked(event, 7, 'BUMP3R Longsleeve', true)">Add to Cart</button>
                         <div></div>
                     </div>
-                    <div onclick="merchpressed(5)" class="listing">
+                    <!-- product_id=6: BUMP3R Crewneck -->
+                    <div class="listing">
                         <img src="./assets/merch/crewneck-bump3r.jpg">
                         <p class="listing-title">BUMP3R Crewneck</p>
-                        <p id="hoodprc4" class="pricetag">$52.00</p>
-                        <a class="vwet">Order Here</a>
+                        <p class="pricetag">$52.00</p>
+                        <button class="atc-btn" onclick="addToCartClicked(event, 6, 'BUMP3R Crewneck', true)">Add to Cart</button>
                         <div></div>
                     </div>
-                    <div onclick="merchpressed(3)" class="listing">
+                    <!-- product_id=4: BUMP3R Bumper Sticker (no size) -->
+                    <div class="listing">
                         <img src="./assets/merch/sticker.png">
                         <p class="listing-title">BUMP3R Bumper Sticker</p>
-                        <p id="hoodprc5" class="pricetag">$7.25</p>
-                        <a class="vwet">Order Here</a>
+                        <p class="pricetag">$7.25</p>
+                        <button class="atc-btn" onclick="addToCartClicked(event, 4, 'BUMP3R Bumper Sticker', false)">Add to Cart</button>
                         <div></div>
                     </div>
-                    <div onclick="merchpressed(4)" class="listing">
+                    <!-- product_id=5: BUMP3R Hat (no size) -->
+                    <div class="listing">
                         <img src="./assets/merch/hat-inter.png">
                         <p class="listing-title">BUMP3R Hat</p>
-                        <p id="hoodprc6" class="pricetag">$25.00</p>
-                        <a class="vwet">Order Here</a>
+                        <p class="pricetag">$25.00</p>
+                        <button class="atc-btn" onclick="addToCartClicked(event, 5, 'BUMP3R Hat', false)">Add to Cart</button>
                         <div></div>
                     </div>
-                    <div onclick="merchpressed(0)" class="listing">
+                    <!-- product_id=1: White Rose Crewneck -->
+                    <div class="listing">
                         <img src="./assets/merch/Crewneck.jpg">
                         <p class="listing-title">White Rose Crewneck</p>
-                        <p id="crwprc" class="pricetag">$55</p>
-                        <a class="vwet">Order Here</a>
+                        <p class="pricetag">$55.00</p>
+                        <button class="atc-btn" onclick="addToCartClicked(event, 1, 'White Rose Crewneck', true)">Add to Cart</button>
                         <div></div>
                     </div>
-                    <div onclick="merchpressed(1)" class="listing">
+                    <!-- product_id=2: White Rose Shirt -->
+                    <div class="listing">
                         <img src="./assets/merch/shirt.jpg">
                         <p class="listing-title">White Rose Shirt</p>
-                        <p id="shrtprc" class="pricetag">$40.35</p>
-                        <a class="vwet">Order Here</a>
+                        <p class="pricetag">$40.35</p>
+                        <button class="atc-btn" onclick="addToCartClicked(event, 2, 'White Rose Shirt', true)">Add to Cart</button>
                         <div></div>
                     </div>
-                    <div onclick="merchpressed(2)" class="listing">
+                    <!-- product_id=3: White Rose Hoodie -->
+                    <div class="listing">
                         <img src="./assets/merch/hoodie.jpg">
                         <p class="listing-title">White Rose Hoodie</p>
-                        <p id="hoodprc7" class="pricetag">$50.00</p>
-                        <a class="vwet">Order Here</a>
+                        <p class="pricetag">$50.00</p>
+                        <button class="atc-btn" onclick="addToCartClicked(event, 3, 'White Rose Hoodie', true)">Add to Cart</button>
                         <div></div>
                     </div>
                 </div>
                 <div class="btmblnk"></div>
             </div>
 
-            <script>
-                function merchpressed(n) {
-                    if (n == 0) {
-                        window.location.href = "https://bumper.printify.me/product/24529192/white-rose-unisex-lightweight-crewneck-sweatshirt";
-                    };
-                    if (n == 1) {
-                        window.location.href = "https://bumper.printify.me/product/22292580/white-rose-cover-shirt"
-                    };
-                    if (n == 2) {
-                        window.location.href = "https://bumper.printify.me/product/24529184/white-rose-burning-love-unisex-hoodie";
-                    };
-                    if (n == 3) {
-                        window.location.href = "https://bumper.printify.me/product/26264618/bumper-sticker-bump3r-retro-sticker-for-cars-vans-and-amp-luggage";
-                    };
-                    if (n == 4) {
-                        window.location.href = "https://bumper.printify.me/product/26264748/vintage-corduroy-cap-embroidered-bump3r-retro-logo";
-                    };
-                    if (n == 5) {
-                        window.location.href = "https://bumper.printify.me/product/26264990/crewneck-sweatshirt-bumper-tour-setlist-graphic";
-                    };
-                    if (n == 6) {
-                        window.location.href = "https://bumper.printify.me/product/26267001/bumper-tour-style-long-sleeve-t-shirt-back-print-setlist-design";
-                    };
-                    if (n == 7) {
-                        window.location.href = "https://bumper.printify.me/product/26267195/bumper-band-tee-collage-portrait-graphic-t-shirt-with-tracklist-back";
-                    };
-                    if (n == 8) {
-                        window.location.href = "https://bumper.printify.me/product/26267288/bumper-neon-face-tshirt-colorful-retro-graphic-tee-with-nerdwired-backprint";
-                    };
-                }
-            </script>
+            <script src="./js/api.js"></script>
+            <script src="./js/auth.js"></script>
+            <script src="./js/cart.js"></script>
 
             <script>
                 let slideIndex = 0;

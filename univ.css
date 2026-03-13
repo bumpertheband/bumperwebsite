@@ -5,6 +5,104 @@ html, body {
     font-weight: bold;
 }
 
+/* Cart badge */
+.cart-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 3px;
+    margin-left: 4px;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+/* Size picker modal */
+.size-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.size-modal {
+    background: white;
+    border: 3px solid black;
+    border-radius: 1.5rem;
+    box-shadow: 6px 8px 0 black;
+    padding: 2rem;
+    max-width: 340px;
+    width: 90%;
+    text-align: center;
+}
+
+.size-modal h3 {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+}
+
+.size-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.size-btn {
+    padding: 0.6rem 0;
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    background: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+
+.size-btn:hover {
+    background: black;
+    color: white;
+}
+
+.size-modal-close {
+    background: none;
+    border: none;
+    font-size: 0.85rem;
+    color: #888;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Add-to-cart button in listings */
+.atc-btn {
+    display: inline-block;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 2.5vmin;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    margin-left: 1vw;
+    margin-bottom: 0.5rem;
+}
+.atc-btn:hover { opacity: 0.8; }
+.atc-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
 .bulk {
     margin-inline: 3.5vw;
 }
